@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+
+# environment
+.env
+.env.local
+.env.production
+
+# bundles (large binary files)
+bundles/*.bundle
+bundles/*.patch
+
+# misc
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts

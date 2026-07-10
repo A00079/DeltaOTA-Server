@@ -1,0 +1,14 @@
+[
+  {
+    "appId": "investor-app-android",
+    "platform": "android",
+    "appName": "Investor App",
+    "createdAt": "2026-07-10T10:00:00.000Z"
+  },
+  {
+    "appId": "investor-app-ios",
+    "platform": "ios",
+    "appName": "Investor App",
+    "createdAt": "2026-07-10T10:00:00.000Z"
+  }
+]

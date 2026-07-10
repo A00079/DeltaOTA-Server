@@ -1,0 +1,17 @@
+[
+  {
+    "appId": "investor-app-android",
+    "platform": "android",
+    "jsVersion": 1,
+    "bundleVersion": 1,
+    "releaseState": 20,
+    "rollout": 100,
+    "hash": "9ccc5ee509cdb36864e3b2f887c92477",
+    "bundleUrl": "REPLACE_WITH_GOOGLE_DRIVE_URL",
+    "isMandatory": false,
+    "description": "OTA v1: Green banner - Delta OTA works!",
+    "appVersion": "5.2",
+    "createdAt": "2026-07-10T12:00:00.000Z",
+    "updatedAt": "2026-07-10T12:00:00.000Z"
+  }
+]

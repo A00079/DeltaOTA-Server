@@ -1,0 +1,160 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 1,
+    "action": "RELEASE_CREATED",
+    "newState": 0,
+    "timestamp": "2026-07-10T10:00:00.000Z",
+    "description": "Initial release created for investor-app-android"
+  },
+  {
+    "id": "a9b979eb-4755-4b7d-9446-7a526d814aba",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 1,
+    "action": "STATE_CHANGED",
+    "previousState": 20,
+    "newState": 25,
+    "timestamp": "2026-07-10T11:02:38.608Z",
+    "description": "State changed from 20 to 25"
+  },
+  {
+    "id": "dfd3aa7f-57fb-4ae7-ad86-fb863e084a13",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 1,
+    "action": "STATE_CHANGED",
+    "previousState": 25,
+    "newState": 20,
+    "timestamp": "2026-07-10T11:02:41.203Z",
+    "description": "State changed from 25 to 20"
+  },
+  {
+    "id": "635d8d4c-7ce0-4771-8971-441159f12a42",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 2,
+    "action": "RELEASE_CREATED",
+    "newState": 0,
+    "timestamp": "2026-07-10T11:33:34.152Z",
+    "description": "Release created: OTA Test: Added green banner - Delta Works!"
+  },
+  {
+    "id": "000cd9e3-689c-4680-bb6b-5424e68debb8",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 2,
+    "action": "STATE_CHANGED",
+    "previousState": 0,
+    "newState": 10,
+    "timestamp": "2026-07-10T11:34:06.786Z",
+    "description": "State changed from 0 to 10"
+  },
+  {
+    "id": "bcbc7d5d-ba5f-410b-b91f-2eebfd282609",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 2,
+    "action": "STATE_CHANGED",
+    "previousState": 10,
+    "newState": 20,
+    "timestamp": "2026-07-10T11:34:06.797Z",
+    "description": "State changed from 10 to 20"
+  },
+  {
+    "id": "57fee37d-6eb3-47ab-a86b-d6fa111bb5eb",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 2,
+    "action": "ROLLOUT_UPDATED",
+    "rollout": 100,
+    "timestamp": "2026-07-10T11:34:06.797Z",
+    "description": "Rollout updated from 0% to 100%"
+  },
+  {
+    "id": "17ee8cf3-20c0-4908-af3a-7d0b580ed202",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 3,
+    "action": "RELEASE_CREATED",
+    "newState": 0,
+    "timestamp": "2026-07-10T11:45:04.190Z",
+    "description": "Release created: OTA v3: Bigger blue banner with full description text"
+  },
+  {
+    "id": "57559d55-898f-46b9-95fd-1cb5dfdb7870",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 3,
+    "action": "STATE_CHANGED",
+    "previousState": 0,
+    "newState": 10,
+    "timestamp": "2026-07-10T11:45:04.332Z",
+    "description": "State changed from 0 to 10"
+  },
+  {
+    "id": "d358d903-e23e-4952-a12c-ad6e188961e8",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 3,
+    "action": "STATE_CHANGED",
+    "previousState": 10,
+    "newState": 20,
+    "timestamp": "2026-07-10T11:45:04.372Z",
+    "description": "State changed from 10 to 20"
+  },
+  {
+    "id": "b6d829c7-d09c-4af9-9909-dd849c59514a",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 3,
+    "action": "ROLLOUT_UPDATED",
+    "rollout": 100,
+    "timestamp": "2026-07-10T11:45:04.372Z",
+    "description": "Rollout updated from 0% to 100%"
+  },
+  {
+    "id": "02523586-b5a9-4e2d-8e47-4ddde5675cd4",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 4,
+    "action": "RELEASE_CREATED",
+    "newState": 0,
+    "timestamp": "2026-07-10T11:54:17.637Z",
+    "description": "Release created: GREEN banner - OTA v4"
+  },
+  {
+    "id": "8c2cfae1-b47f-4ce7-a2bd-81a50f37aca5",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 4,
+    "action": "STATE_CHANGED",
+    "previousState": 0,
+    "newState": 10,
+    "timestamp": "2026-07-10T11:54:17.867Z",
+    "description": "State changed from 0 to 10"
+  },
+  {
+    "id": "fa81bc36-8f6f-40ce-96e8-2ab13c6ae6dc",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 4,
+    "action": "STATE_CHANGED",
+    "previousState": 10,
+    "newState": 20,
+    "timestamp": "2026-07-10T11:54:17.890Z",
+    "description": "State changed from 10 to 20"
+  },
+  {
+    "id": "86949674-7b6c-4d24-aa11-220c3bcc3960",
+    "appId": "investor-app-android",
+    "jsVersion": 1,
+    "bundleVersion": 4,
+    "action": "ROLLOUT_UPDATED",
+    "rollout": 100,
+    "timestamp": "2026-07-10T11:54:17.890Z",
+    "description": "Rollout updated from 0% to 100%"
+  }
+]
