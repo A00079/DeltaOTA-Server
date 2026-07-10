@@ -6,12 +6,12 @@
     "bundleVersion": 1,
     "releaseState": 20,
     "rollout": 100,
-    "hash": "9ccc5ee509cdb36864e3b2f887c92477",
-    "bundleUrl": "REPLACE_WITH_GOOGLE_DRIVE_URL",
+    "hash": "9a853febd4fba5a0b4d39e77e6e6c4e1",
+    "bundleUrl": "https://drive.google.com/uc?export=download&id=1dsKnKHfUSA8LbdPq0Sz-0Po7fo8v4KUy",
     "isMandatory": false,
-    "description": "OTA v1: Green banner - Delta OTA works!",
+    "description": "OTA v1: Added version indicator on IntroScreen",
     "appVersion": "5.2",
-    "createdAt": "2026-07-10T12:00:00.000Z",
-    "updatedAt": "2026-07-10T12:00:00.000Z"
+    "createdAt": "2026-07-10T17:00:00.000Z",
+    "updatedAt": "2026-07-10T17:00:00.000Z"
   }
 ]
