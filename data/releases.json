@@ -3,7 +3,7 @@
     "appId": "investor-app-android",
     "platform": "android",
     "jsVersion": 1,
-    "bundleVersion": 2,
+    "bundleVersion": 3,
     "releaseState": 20,
     "rollout": 100,
     "hash": "0fba7eadd4ed53fb56be6b9689e4edbb",
