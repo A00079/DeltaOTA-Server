@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readJSON, writeJSON } from "@/lib/db";
+import { readBlobJSON, writeBlobJSON } from "@/lib/blob-db";
 import { Release, ReleaseState, HistoryEntry } from "@/lib/types";
 import { validateStateTransition, validateRollout } from "@/lib/validation";
 import { randomUUID } from "crypto";
@@ -17,7 +17,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       );
     }
 
-    const releases = readJSON<Release[]>("releases.json");
+    const releases = await readBlobJSON<Release[]>("releases.json", []);
 
     const releaseIndex = releases.findIndex(
       (r) =>
@@ -91,12 +91,12 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
     release.updatedAt = now;
     releases[releaseIndex] = release;
-    writeJSON("releases.json", releases);
+    await writeBlobJSON("releases.json", releases);
 
     if (historyEntries.length > 0) {
-      const history = readJSON<HistoryEntry[]>("history.json");
+      const history = await readBlobJSON<HistoryEntry[]>("history.json", []);
       history.push(...historyEntries);
-      writeJSON("history.json", history);
+      await writeBlobJSON("history.json", history);
     }
 
     return NextResponse.json({ release });

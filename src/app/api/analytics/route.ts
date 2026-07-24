@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readJSON, writeJSON } from "@/lib/db";
+import { readBlobJSON, writeBlobJSON } from "@/lib/blob-db";
 import { AnalyticsEvent } from "@/lib/types";
 import { randomUUID } from "crypto";
 
@@ -10,7 +10,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     const event = searchParams.get("event");
     const limitStr = searchParams.get("limit");
 
-    let analytics = readJSON<AnalyticsEvent[]>("analytics.json");
+    let analytics = await readBlobJSON<AnalyticsEvent[]>("analytics.json", []);
 
     if (appId) {
       analytics = analytics.filter((a) => a.appId === appId);
@@ -55,7 +55,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       );
     }
 
-    const analytics = readJSON<AnalyticsEvent[]>("analytics.json");
+    const analytics = await readBlobJSON<AnalyticsEvent[]>("analytics.json", []);
 
     const newEvent: AnalyticsEvent = {
       id: randomUUID(),
@@ -68,7 +68,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     };
 
     analytics.push(newEvent);
-    writeJSON("analytics.json", analytics);
+    await writeBlobJSON("analytics.json", analytics);
 
     return NextResponse.json({ success: true, event: newEvent }, { status: 201 });
   } catch (error) {

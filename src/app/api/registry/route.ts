@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readJSON, writeJSON } from "@/lib/db";
+import { readBlobJSON, writeBlobJSON } from "@/lib/blob-db";
 import { Registry } from "@/lib/types";
 import { validateRegistry } from "@/lib/validation";
 
 export async function GET(): Promise<NextResponse> {
   try {
-    const registry = readJSON<Registry[]>("registry.json");
+    const registry = await readBlobJSON<Registry[]>("registry.json", []);
     return NextResponse.json({ apps: registry });
   } catch (error) {
     console.error("GET /api/registry error:", error);
@@ -28,7 +28,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       );
     }
 
-    const registry = readJSON<Registry[]>("registry.json");
+    const registry = await readBlobJSON<Registry[]>("registry.json", []);
 
     const existing = registry.find(
       (r) => r.appId === body.appId && r.platform === body.platform
@@ -49,7 +49,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     };
 
     registry.push(newApp);
-    writeJSON("registry.json", registry);
+    await writeBlobJSON("registry.json", registry);
 
     return NextResponse.json({ app: newApp }, { status: 201 });
   } catch (error) {

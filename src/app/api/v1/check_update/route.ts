@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readJSON } from "@/lib/db";
+import { readBlobJSON } from "@/lib/blob-db";
 import { Release, ReleaseState } from "@/lib/types";
 
 export async function GET(request: NextRequest): Promise<NextResponse> {
@@ -31,7 +31,8 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       );
     }
 
-    const releases = readJSON<Release[]>("releases.json");
+    // Read releases from Vercel Blob
+    const releases = await readBlobJSON<Release[]>("releases.json", []);
 
     const appReleases = releases.filter(
       (r) => r.appId === appId && r.jsVersion === jsVersion

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readJSON } from "@/lib/db";
+import { readBlobJSON } from "@/lib/blob-db";
 import { HistoryEntry } from "@/lib/types";
 
 export async function GET(request: NextRequest): Promise<NextResponse> {
@@ -8,7 +8,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     const appId = searchParams.get("appId");
     const limitStr = searchParams.get("limit");
 
-    let history = readJSON<HistoryEntry[]>("history.json");
+    let history = await readBlobJSON<HistoryEntry[]>("history.json", []);
 
     if (appId) {
       history = history.filter((h) => h.appId === appId);
